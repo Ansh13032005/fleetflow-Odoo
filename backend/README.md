@@ -31,6 +31,32 @@
 $ npm install
 ```
 
+## Test data (all dashboards)
+
+One seed file fills the database so you can test every dashboard. From the **backend** folder:
+
+```bash
+# Add test data (run after migrations)
+npm run db:seed
+```
+
+**Full reset** (drops DB, reapplies migrations, then seeds):
+
+```bash
+npm run db:reset
+```
+
+**Test logins** (password: `Test123!`):
+
+| Role     | Email                     |
+|----------|---------------------------|
+| Manager  | manager@fleetflow.test    |
+| Dispatcher | dispatcher@fleetflow.test |
+| Safety   | safety@fleetflow.test     |
+| Finance  | finance@fleetflow.test    |
+
+Seed file: `prisma/seed.ts` (vehicles, drivers, trips, maintenance, fuel expenses).
+
 ## Compile and run the project
 
 ```bash

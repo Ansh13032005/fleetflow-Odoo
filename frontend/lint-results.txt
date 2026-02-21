@@ -1,0 +1,51 @@
+﻿
+E:\Program Files\Fleetflow\frontend\src\app\dispatcher\trips\page.tsx
+  5:10  warning  'Trip' is defined but never used  @typescript-eslint/no-unused-vars
+
+E:\Program Files\Fleetflow\frontend\src\app\finance\analytics\page.tsx
+  3:10  warning  'useMemo' is defined but never used  @typescript-eslint/no-unused-vars
+
+E:\Program Files\Fleetflow\frontend\src\app\finance\page.tsx
+  3:10  warning  'useMemo' is defined but never used  @typescript-eslint/no-unused-vars
+
+E:\Program Files\Fleetflow\frontend\src\app\manager\analytics\page.tsx
+   7:16  warning  'TrendingUp' is defined but never used               @typescript-eslint/no-unused-vars
+   8:29  warning  'AlertTriangle' is defined but never used            @typescript-eslint/no-unused-vars
+  57:11  warning  'fleetCostPerKm' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+E:\Program Files\Fleetflow\frontend\src\app\manager\expenses\page.tsx
+  9:38  warning  'CheckCircle2' is defined but never used  @typescript-eslint/no-unused-vars
+
+E:\Program Files\Fleetflow\frontend\src\app\manager\safety\page.tsx
+  7:18  warning  'ShieldAlert' is defined but never used  @typescript-eslint/no-unused-vars
+  7:40  warning  'Star' is defined but never used         @typescript-eslint/no-unused-vars
+
+E:\Program Files\Fleetflow\frontend\src\app\manager\trips\page.tsx
+   60:7   warning  'emptyForm' is assigned a value but never used      @typescript-eslint/no-unused-vars
+   69:44  warning  'updateVehicle' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  382:20  warning  'vehicles' is assigned a value but never used       @typescript-eslint/no-unused-vars
+  382:30  warning  'drivers' is assigned a value but never used        @typescript-eslint/no-unused-vars
+
+E:\Program Files\Fleetflow\frontend\src\app\manager\vehicles\page.tsx
+   34:10  warning  'VehicleModal' is defined but never used         @typescript-eslint/no-unused-vars
+  131:11  warning  'handleSave' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+E:\Program Files\Fleetflow\frontend\src\app\safety-officer\drivers\page.tsx
+    7:5   warning  'ShieldCheck' is defined but never used            @typescript-eslint/no-unused-vars
+    7:27  warning  'Star' is defined but never used                   @typescript-eslint/no-unused-vars
+    7:33  warning  'AlertTriangle' is defined but never used          @typescript-eslint/no-unused-vars
+    7:48  warning  'CheckCircle2' is defined but never used           @typescript-eslint/no-unused-vars
+    7:62  warning  'Ban' is defined but never used                    @typescript-eslint/no-unused-vars
+    8:5   warning  'TrendingUp' is defined but never used             @typescript-eslint/no-unused-vars
+   33:20  warning  'updateDriver' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  158:11  warning  'avgScore' is assigned a value but never used      @typescript-eslint/no-unused-vars
+
+E:\Program Files\Fleetflow\frontend\src\app\safety-officer\layout.tsx
+  5:10  warning  'ShieldCheck' is defined but never used  @typescript-eslint/no-unused-vars
+
+E:\Program Files\Fleetflow\frontend\src\app\safety-officer\page.tsx
+  6:60  warning  'CheckCircle2' is defined but never used  @typescript-eslint/no-unused-vars
+  6:93  warning  'TrendingUp' is defined but never used    @typescript-eslint/no-unused-vars
+
+Γ£û 26 problems (0 errors, 26 warnings)
+

@@ -1,0 +1,144 @@
+[0m[0m
+[0m[4mE:\Program Files\Fleetflow\frontend\src\app\dispatcher\page.tsx[24m[0m
+[0m  [2m5:36[22m  [33mwarning[39m  'CheckCircle2' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4mE:\Program Files\Fleetflow\frontend\src\app\dispatcher\trips\page.tsx[24m[0m
+[0m  [2m5:10[22m   [33mwarning[39m  'Trip' is defined but never used    [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m6:10[22m   [33mwarning[39m  'Route' is defined but never used   [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m6:83[22m   [33mwarning[39m  'Users' is defined but never used   [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m6:102[22m  [33mwarning[39m  'Weight' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4mE:\Program Files\Fleetflow\frontend\src\app\dispatcher\vehicles\page.tsx[24m[0m
+[0m  [2m5:39[22m  [33mwarning[39m  'AlertTriangle' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4mE:\Program Files\Fleetflow\frontend\src\app\finance\analytics\page.tsx[24m[0m
+[0m   [2m6:33[22m  [33mwarning[39m  'TrendingDown' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m31:26[22m  [31merror[39m    Compilation Skipped: Existing memoization could not be preserved[0m
+[0m[0m
+[0mReact Compiler has skipped optimizing this component because the existing manual memoization could not be preserved. This value was memoized in source but not in compilation output.[0m
+[0m[0m
+[0mE:\Program Files\Fleetflow\frontend\src\app\finance\analytics\page.tsx:31:26[0m
+[0m  29 |     const utilization = activeVehicles > 0 ? r2((vehicles.filter((v) => v.status === VehicleStatus.ON_TRIP).length / activeVehicles) * 100) : 0;[0m
+[0m  30 |[0m
+[0m> 31 |     const vehicleStats = useMemo(() => vehicles.map((v) => {[0m
+[0m     |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m> 32 |         const fuel = expenseLogs.filter((l) => l.vehicleId === v.id).reduce((s, l) => s + l.fuelCost, 0);[0m
+[0m     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m> 33 |         const maint = maintenanceLogs.filter((l) => l.vehicleId === v.id).reduce((s, l) => s + l.cost, 0);[0m
+[0m     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m> 34 |         const litres = expenseLogs.filter((l) => l.vehicleId === v.id).reduce((s, l) => s + l.fuelLiters, 0);[0m
+[0m     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m> 35 |         const km = expenseLogs.filter((l) => l.vehicleId === v.id).reduce((s, l) => s + (l.distanceKm ?? 0), 0);[0m
+[0m     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m> 36 |         const kml = litres > 0 && km > 0 ? r2(km / litres) : null;[0m
+[0m     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m> 37 |         const tripsComp = trips.filter((t) => t.vehicleId === v.id && t.status === TripStatus.COMPLETED).length;[0m
+[0m     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m> 38 |         return { ...v, fuel, maint, total: fuel + maint, litres, km, kml, tripsComp };[0m
+[0m     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m> 39 |     }).sort((a, b) => b.total - a.total), [vehicles, expenseLogs, maintenanceLogs, trips]);[0m
+[0m     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Could not preserve existing memoization[0m
+[0m  40 |[0m
+[0m  41 |     const maxCost = vehicleStats[0]?.total ?? 1;[0m
+[0m  42 |  [2mreact-hooks/preserve-manual-memoization[22m[0m
+[0m[0m
+[0m[4mE:\Program Files\Fleetflow\frontend\src\app\finance\expenses\page.tsx[24m[0m
+[0m  [2m8:52[22m  [33mwarning[39m  'FileText' is defined but never used      [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m8:77[22m  [33mwarning[39m  'CheckCircle2' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4mE:\Program Files\Fleetflow\frontend\src\app\finance\layout.tsx[24m[0m
+[0m  [2m5:10[22m  [33mwarning[39m  'IndianRupee' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4mE:\Program Files\Fleetflow\frontend\src\app\finance\page.tsx[24m[0m
+[0m  [2m20:24[22m  [31merror[39m  Compilation Skipped: Existing memoization could not be preserved[0m
+[0m[0m
+[0mReact Compiler has skipped optimizing this component because the existing manual memoization could not be preserved. This value was memoized in source but not in compilation output.[0m
+[0m[0m
+[0mE:\Program Files\Fleetflow\frontend\src\app\finance\page.tsx:20:24[0m
+[0m  18 |     const fleetKmL = totalLitres > 0 && totalKm > 0 ? Math.round((totalKm / totalLitres) * 100) / 100 : null;[0m
+[0m  19 |[0m
+[0m> 20 |     const perVehicle = useMemo(() => vehicles.map((v) => {[0m
+[0m     |                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m> 21 |         const fuel = expenseLogs.filter((l) => l.vehicleId === v.id).reduce((s, l) => s + l.fuelCost, 0);[0m
+[0m     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m> 22 |         const maint = maintenanceLogs.filter((l) => l.vehicleId === v.id).reduce((s, l) => s + l.cost, 0);[0m
+[0m     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m> 23 |         return { ...v, fuel, maint, total: fuel + maint };[0m
+[0m     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m> 24 |     }).sort((a, b) => b.total - a.total), [vehicles, expenseLogs, maintenanceLogs]);[0m
+[0m     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Could not preserve existing memoization[0m
+[0m  25 |[0m
+[0m  26 |     const maxCost = perVehicle[0]?.total ?? 1;[0m
+[0m  27 |  [2mreact-hooks/preserve-manual-memoization[22m[0m
+[0m[0m
+[0m[4mE:\Program Files\Fleetflow\frontend\src\app\forgot-password\page.tsx[24m[0m
+[0m  [2m49:81[22m  [31merror[39m  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  [2mreact/no-unescaped-entities[22m[0m
+[0m[0m
+[0m[4mE:\Program Files\Fleetflow\frontend\src\app\login\page.tsx[24m[0m
+[0m  [2m170:28[22m  [31merror[39m  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  [2mreact/no-unescaped-entities[22m[0m
+[0m[0m
+[0m[4mE:\Program Files\Fleetflow\frontend\src\app\manager\analytics\page.tsx[24m[0m
+[0m   [2m7:16[22m  [33mwarning[39m  'TrendingUp' is defined but never used               [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m   [2m8:29[22m  [33mwarning[39m  'AlertTriangle' is defined but never used            [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m57:11[22m  [33mwarning[39m  'fleetCostPerKm' is assigned a value but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4mE:\Program Files\Fleetflow\frontend\src\app\manager\expenses\page.tsx[24m[0m
+[0m  [2m9:38[22m  [33mwarning[39m  'CheckCircle2' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4mE:\Program Files\Fleetflow\frontend\src\app\manager\maintenance\page.tsx[24m[0m
+[0m    [2m8:32[22m   [33mwarning[39m  'ArrowUpRight' is defined but never used                         [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m    [2m9:19[22m   [33mwarning[39m  'Clock' is defined but never used                                [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m    [2m9:39[22m   [33mwarning[39m  'Zap' is defined but never used                                  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m448:125[22m  [31merror[39m    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  [2mreact/no-unescaped-entities[22m[0m
+[0m[0m
+[0m[4mE:\Program Files\Fleetflow\frontend\src\app\manager\safety\page.tsx[24m[0m
+[0m  [2m7:18[22m  [33mwarning[39m  'ShieldAlert' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m7:40[22m  [33mwarning[39m  'Star' is defined but never used         [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4mE:\Program Files\Fleetflow\frontend\src\app\manager\trips\page.tsx[24m[0m
+[0m   [2m60:7[22m   [33mwarning[39m  'emptyForm' is assigned a value but never used      [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m   [2m69:44[22m  [33mwarning[39m  'updateVehicle' is assigned a value but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m382:20[22m  [33mwarning[39m  'vehicles' is assigned a value but never used       [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m382:30[22m  [33mwarning[39m  'drivers' is assigned a value but never used        [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4mE:\Program Files\Fleetflow\frontend\src\app\manager\vehicles\page.tsx[24m[0m
+[0m   [2m34:10[22m  [33mwarning[39m  'VehicleModal' is defined but never used         [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m131:11[22m  [33mwarning[39m  'handleSave' is assigned a value but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4mE:\Program Files\Fleetflow\frontend\src\app\safety-officer\drivers\page.tsx[24m[0m
+[0m    [2m7:5[22m   [33mwarning[39m  'ShieldCheck' is defined but never used            [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m    [2m7:27[22m  [33mwarning[39m  'Star' is defined but never used                   [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m    [2m7:33[22m  [33mwarning[39m  'AlertTriangle' is defined but never used          [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m    [2m7:48[22m  [33mwarning[39m  'CheckCircle2' is defined but never used           [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m    [2m7:62[22m  [33mwarning[39m  'Ban' is defined but never used                    [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m    [2m8:5[22m   [33mwarning[39m  'TrendingUp' is defined but never used             [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m   [2m33:20[22m  [33mwarning[39m  'updateDriver' is assigned a value but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m158:11[22m  [33mwarning[39m  'avgScore' is assigned a value but never used      [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4mE:\Program Files\Fleetflow\frontend\src\app\safety-officer\layout.tsx[24m[0m
+[0m  [2m5:10[22m  [33mwarning[39m  'ShieldCheck' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4mE:\Program Files\Fleetflow\frontend\src\app\safety-officer\page.tsx[24m[0m
+[0m  [2m6:60[22m  [33mwarning[39m  'CheckCircle2' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m6:93[22m  [33mwarning[39m  'TrendingUp' is defined but never used    [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4mE:\Program Files\Fleetflow\frontend\src\components\ThemeProvider.tsx[24m[0m
+[0m  [2m11:9[22m  [31merror[39m  Error: Calling setState synchronously within an effect can trigger cascading renders[0m
+[0m[0m
+[0mEffects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:[0m
+[0m* Update external systems with the latest state from React.[0m
+[0m* Subscribe for updates from some external system, calling setState in a callback function when external state changes.[0m
+[0m[0m
+[0mCalling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).[0m
+[0m[0m
+[0mE:\Program Files\Fleetflow\frontend\src\components\ThemeProvider.tsx:11:9[0m
+[0m   9 |[0m
+[0m  10 |     useEffect(() => {[0m
+[0m> 11 |         setMounted(true);[0m
+[0m     |         ^^^^^^^^^^ Avoid calling setState() directly within an effect[0m
+[0m  12 |     }, []);[0m
+[0m  13 |[0m
+[0m  14 |     useEffect(() => {  [2mreact-hooks/set-state-in-effect[22m[0m
+[0m[0m
+[0m[31m[1m✖ 42 problems (6 errors, 36 warnings)[22m[39m[0m
+[0m[31m[1m[22m[39m[0m
