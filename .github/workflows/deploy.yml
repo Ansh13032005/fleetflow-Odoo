@@ -1,0 +1,19 @@
+name: Deploy Fleetflow
+
+on:
+  push:
+    tags:
+      - 'v*' # Trigger deployment on version tags (e.g., v1.0.0)
+
+jobs:
+  docker-build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Log in to Docker Hub
+        run: echo "Docker Push Steps would go here"
+        
+      - name: Build and Push Docker Compose
+        run: docker-compose build
